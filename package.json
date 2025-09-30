@@ -1,11 +1,21 @@
 {
   "name": "kavas-editor",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha.1",
   "main": "index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "Another richi text editor powered by canvas.",
+  "devDependencies": {
+    "@eslint/js": "^9.36.0",
+    "eslint": "^9.36.0",
+    "globals": "^16.4.0",
+    "jiti": "^2.6.0",
+    "typescript-eslint": "^8.45.0"
+  }
 }
