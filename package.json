@@ -1,14 +1,18 @@
 {
   "name": "kavas-editor",
   "version": "1.0.0-alpha.1",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "unpkg": "dist/index.umd.js",
+  "typings": "dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "npm run clean && vite build",
+    "build": "npm run clean && npm run version && vite build",
+    "version": "node ./scripts/generate-version.cjs",
     "clean": "rimraf ./dist",
-    "lint": "eslint .",
+    "lint": "eslint ./src",
     "test": "vitest",
     "coverage": "vitest run --coverage"
   },
@@ -18,6 +22,7 @@
   "devDependencies": {
     "@eslint/js": "^9.36.0",
     "eslint": "^9.36.0",
+    "fs-extra": "^11.3.2",
     "globals": "^16.4.0",
     "happy-dom": "^19.0.2",
     "jiti": "^2.6.0",
