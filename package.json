@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "build": "npm run clean && npm run version && vite build",
-    "version": "node ./scripts/generate-version.cjs",
+    "version": "node ./scripts/generate-version.js",
     "clean": "rimraf ./dist",
     "lint": "eslint ./src",
     "test": "vitest",
